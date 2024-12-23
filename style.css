@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background:#EEA47F;
+    background: linear-gradient(45deg, rgba(213, 128, 24, 0.607) 15%, rgba(145, 134, 134, 0.716) 100%);
+
+    font-family: 'Nunito', sans-serif;
+    color: #FCF6F5;
+}
+
+.container {
+    width: 350px;
+    background: linear-gradient(45deg, rgba(35, 25, 25, 0.605) 15%, rgba(0, 0, 0, 0.71) 100%);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(99, 67, 67, 0.726);  /* Enhanced shadow */
+    backdrop-filter: blur(30px);  /* Add blur effect */
+}
+
+.heading {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Added text shadow for depth */
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    padding: 10px 18px;
+    background: #bb7220e8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* Shadow effect for buttons */
+}
+
+.tab button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.tab button:active {
+    transform: translateY(1px);
+}
+
+.loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loader .dot {
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    animation: bounce 1.2s infinite ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect for loader dots */
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+.loader .dot:nth-child(1) {
+    animation-delay: -0.4s;
+}
+
+.loader .dot:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.loader .dot:nth-child(3) {
+    animation-delay: -0.2s;
+}
+
+.loader .dot:nth-child(4) {
+    animation-delay: -0.1s;
+}
+
+.searchBox {
+    display: none;
+    justify-content: center;
+    padding: 10px;
+}
+
+.searchBox input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* Added shadow for input */
+}
+
+.searchBox input[type="text"]:focus {
+    background-color: #555;
+}
+
+.searchBox button {
+    padding: 12px 18px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for button */
+}
+
+.searchBox button:hover {
+    background-color: #f44336;
+    transform: translateY(-3px);
+}
+
+.searchBox button:active {
+    transform: translateY(1px);
+}
+
+.showcase {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase .nameOfcity {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Text shadow */
+}
+
+.showcase .WeatherType {
+    font-size: 20px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.showcase .typeEmoji {
+    font-size: 50px;
+    color: #ffeb3b;
+    margin-bottom: 25px;
+}
+
+.showcase .realTemp {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Text shadow */
+}
+
+.showcase .others {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.showcase .others > div {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.showcase .others .emoji {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.showcase .others p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.active {
+    display: flex !important;
+}

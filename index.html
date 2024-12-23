@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="heading">WEATHER APP</header>
+      <div class="tab">
+        <button class="yourWeather">Your Weather</button>
+        <button class="searchWeather">Search Weather</button>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="searchBox">
+        <input type="text" placeholder="Search for city" class="searchCity" value=""/>
+        <button searchbutton><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="showcase">
+        <div class="nameOfcity"></div>
+        <div class="WeatherType"></div>
+        <div class="typeEmoji"></div>
+        <div class="realTemp"></div>
+        <div class="others">
+          <div class="windspeed">
+            <div class="emoji"><i class="fa-solid fa-wind"></i></div>
+            <p>WINDSPEED</p>
+            <p class="windspeeddata"></p>
+          </div>
+          <div class="humidity">
+            <div class="emoji"><i class="fa-solid fa-droplet"></i></div>
+            <p>HUMIDITY</p>
+            <p class="humiditydata"></p>
+          </div>
+          <div class="Clouds">
+            <div class="emoji"><i class="fa-solid fa-cloud"></i></div>
+            <p>CLOUDS</p>
+            <p class="cloudsdata"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
